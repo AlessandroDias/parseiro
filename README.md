@@ -1,13 +1,14 @@
 email-marketing-parser
 ======================
 
-
 Parse links on an E-mail Marketing html file, replacing variables with values.
 
-It transforms:
+It replaces:
 
-  > `<a href="#link_name#">Google</a>` 
-  
-  into this:
-  
-  > `<a href="http://www.google.com.br&search=%s">Google</a>`
+  > `<a href="#{link_name}">Google</a>`
+
+  with the link you set in your config.json file:
+
+  > `<a href="http://www.google.com.br">Google</a>`
+
+for example.
