@@ -1,9 +1,6 @@
 {
-	"file_name": "emkt_b2c_diadascriancas_papertoyv2_cashback.html",
-	"links": [
-		{ "link_solucoes_vp_topo" : "http://www.teste.com.br" },
-		{ "link_crie_vp_topo" : "http://www.google.com.br" },
-		{ "link_logo_topo" : "http://www.novahaus.com.br" },
-		{ "link_corpo" : "www.corpo.com" }
-	]
+    "file_name": "your_file_name.html",
+    "links": [
+        { "link_name" : "http://www.google.com" }
+    ]
 }
