@@ -1,12 +1,12 @@
 var fs = require('fs'),
-	path = __dirname + '/',
-	output_path = path + '/output/';
+	input_path = __dirname + '/',
+	output_path = input_path + '/output/';
 
 var json_file = fs.readFileSync('config.json', 'utf8');		// reads json config file
 var config_file = JSON.parse(json_file);					// json file parsed
 var html_file_name = config_file["file_name"];				// Name of the HTML file
 
-fs.readFile(path + html_file_name, "utf-8", function (err, data) {
+fs.readFile(input_path + html_file_name, "utf-8", function (err, data) {
 	if (err) { throw err; }
 
 	for (var i = 0, j = config_file.links.length; i < j; i++) {
@@ -21,13 +21,19 @@ fs.readFile(path + html_file_name, "utf-8", function (err, data) {
 		}
 	}
 
-	// Updates the HTML file
-	fs.writeFile(output_path + html_file_name, data, "utf-8", function (err) {
-		if (err) return console.log(err);
-		console.log('\n**********************************');
-		console.log('*                                *');
-		console.log('*   File Parsed with Success!!   *');
-		console.log('*                                *');
-		console.log('**********************************\n');
+	fs.exists(output_path, function(exists) {
+		if (!exists) {
+			fs.mkdir(output_path);
+		}
+		// Updates the HTML file
+		fs.writeFile(output_path + html_file_name, data, "utf-8", function (err) {
+			if (err) return console.log(err);
+			console.log('\n**********************************');
+			console.log('*                                *');
+			console.log('*   File Parsed with Success!!   *');
+			console.log('*                                *');
+			console.log('**********************************\n');
+		});
 	});
+
 });
