@@ -1,4 +1,4 @@
 email-marketing-parser
 ======================
 
-Parse links on a e-mail marketing file, replacing variables with values.
+Parse links on an E-mail Marketing html file, replacing variables with values.
