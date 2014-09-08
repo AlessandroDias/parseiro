@@ -1,4 +1,4 @@
-email-marketing-parser
+HTML Parser
 ======================
 
 Parse links on an *html* file, replacing variables with values.
