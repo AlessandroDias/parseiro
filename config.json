@@ -1,6 +1,7 @@
 {
     "file_name": "your_file_name.html",
     "links": [
-        { "link_name" : "http://www.google.com" }
+        { "link_name" : "http://www.google.com" },
+        { "another_link" : "http://nodejs.org" }
     ]
 }

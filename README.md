@@ -10,13 +10,14 @@ In this example, we are replacing **#{link_name}** by **http://www.google.com**:
 
   > `<a href="#{link_name}">Google</a>` becomes `<a href="http://www.google.com">Google</a>`
 
-This value was set in our **config.json** file, as well as the name of our *html file*.
+This value was set in our **config.json** file, as well as the **name** of our *html file*.
 
 ```json
 {
 	"file_name": "your_file_name.html",
 	"links": [
-		{ "link_name" : "http://www.google.com" }
+		{ "link_name" : "http://www.google.com" },
+        { "another_link" : "http://nodejs.org" }
 	]
 }
 ```
