@@ -6,18 +6,18 @@ Parseiro - The HTML Parser
 ======================
 ###Sumary###
 
-1. [Example](#Example)
-2. [Instalation](#Instalation)
-3. [Usage](#Usage)
-4. [Notes](#Notes)
-5. [Tips](#Tips)
-6. [Requirements](#Requirements)
-7. [Contribute](#Contribute)
+1. [Example](#example)
+2. [Instalation](#instalation)
+3. [Usage](#usage)
+4. [Notes](#notes)
+5. [Tips](#tips)
+6. [Requirements](#requirements)
+7. [Contribute](#contribute)
 
 ======================
 ###Example###
 
-In this example, **Parseiro** will get all variables inside the *#{}* tag and replace them with their respective values, set in the **config.json**.
+In this example, **Parseiro** will get all variables inside the **#{  }** tag and replace them with their respective values, set in the **config.json**.
 
   > `<a href="#{first-link}">First link</a>`
 
@@ -43,6 +43,8 @@ The **config.json** file for this example would look like this:
 
 ======================
 ###Installation###
+
+Run the following command in your command line tool;
 
 > npm install parseiro
 
