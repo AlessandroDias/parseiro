@@ -1,26 +1,36 @@
 HTML Parser
 ======================
 
-Parse links on an *html* file, replacing variables with values.
+Parse links on an *HTML* file, replacing variables with values.
 
 ======================
 ### Example: ###
 
-In this example, we are replacing **#{link_name}** by **http://www.google.com**:
+In this example, we will replace all variables with their respective values, set in the **config.json**.
 
-  > `<a href="#{link_name}">Google</a>` becomes `<a href="http://www.google.com">Google</a>`
+  > `<a href="#{first-link}">First link</a>`
 
-This value was set in our **config.json** file, as well as the **name** of our *html file*.
+  > `<a href="#{second-link}">Any other link</a>`
+
+  > `<img src="#{highlight-image}" alt="This is my Awesome image!">`
+
+  > `<p>#{cool-text}</p>`
+
+The **config.json** file for this example would look like this:
 
 ```json
 {
-	"file_name": "your_file_name.html",
-	"links": [
-		{ "link_name" : "http://www.google.com" },
-        { "another_link" : "http://nodejs.org" }
-	]
+    "file_name": "index.html",
+    "links": [
+        { "first-link"      : "http://www.google.com" },
+        { "second-link"     : "http://nodejs.org" },
+        { "highlight-image" : "http://lorempixel.com/400/200/animals" },
+        { "cool-text"       : "Lorem ipsum dolor sit amet, consectetur adipisicing elit." }
+    ]
 }
 ```
+*Don't forget to change the value of the  __"file_name"__ key!!*
+
 
 ======================
 ### Installation & Usage: ###

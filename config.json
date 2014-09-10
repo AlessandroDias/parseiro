@@ -1,7 +1,9 @@
 {
-    "file_name": "your_file_name.html",
+    "file_name": "index.html",
     "links": [
-        { "link_name" : "http://www.google.com" },
-        { "another_link" : "http://nodejs.org" }
+        { "first-link"      : "http://www.google.com" },
+        { "second-link"     : "http://nodejs.org" },
+        { "highlight-image" : "http://lorempixel.com/400/200/animals" },
+        { "cool-text"       : "Lorem ipsum dolor sit amet, consectetur adipisicing elit." }
     ]
 }
