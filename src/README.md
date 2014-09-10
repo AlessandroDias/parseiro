@@ -7,7 +7,7 @@ Parseiro - The HTML Parser
 ###Sumary###
 
 1. [Example](#example)
-2. [Instalation](#instalation)
+2. [Installation](#installation)
 3. [Usage](#usage)
 4. [Notes](#notes)
 5. [Tips](#tips)
@@ -55,7 +55,7 @@ Once you have installed it in your system, follow the steps bellow:
 
 1. Modify your *html* file, placing the **variables** where it is needed
 2. Set the values of the **variables** in the *config.json* file
-3. Run the command **`parseiro <file_name.html>`** from your command line tool, and your *parsed file* will be placed at the *output* folder
+3. Run the command **`parseiro <file_name.html>`** ( without the <  > ) from your command line tool, and your *parsed file* will be placed at the **output folder**
 
 ======================
 ###Notes###
