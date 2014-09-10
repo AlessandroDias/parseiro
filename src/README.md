@@ -1,12 +1,23 @@
-HTML Parser
+Parseiro - The HTML Parser
 ======================
 
-Parse links on an *HTML* file, replacing variables with values.
+**Parseiro** simply parses the variables in the HTML file, converting them into values.
 
 ======================
-### Example: ###
+###Sumary###
 
-In this example, we will replace all variables with their respective values, set in the **config.json**.
+1. [Example](#Example)
+2. [Instalation](#Instalation)
+3. [Usage](#Usage)
+4. [Notes](#Notes)
+5. [Tips](#Tips)
+6. [Requirements](#Requirements)
+7. [Contribute](#Contribute)
+
+======================
+###Example###
+
+In this example, **Parseiro** will get all variables inside the *#{}* tag and replace them with their respective values, set in the **config.json**.
 
   > `<a href="#{first-link}">First link</a>`
 
@@ -20,7 +31,6 @@ The **config.json** file for this example would look like this:
 
 ```json
 {
-    "file_name": "index.html",
     "links": [
         { "first-link"      : "http://www.google.com" },
         { "second-link"     : "http://nodejs.org" },
@@ -29,28 +39,48 @@ The **config.json** file for this example would look like this:
     ]
 }
 ```
-*Don't forget to change the value of the  __"file_name"__ key!!*
-
-
-======================
-### Installation & Usage: ###
-
-1. Download the *.zip* file from github
-2. Extract it anywhere you want
-3. Copy the *html* file that you want to replace the variables into the root of the folder you have extracted it
-4. Configure the **file_name** and the **links variable keys** in the *config.json*
-5. Run the command **node parse.js** from your prompt/terminal
-6. That's it! Your parsed file will be placed at the output folder
+*Checkout the Demo folder, for a better understanding.*
 
 ======================
-### Requirements: ###
+###Installation###
 
-The only requirement is that you have **[node.js](http://nodejs.org/)** installed on your system.
+> npm install parseiro
 
 ======================
-### Contribute Please!! ###
+###Usage###
 
-Leave your comments, doubts, opinions!
+Once you have installed it in your system, follow the steps bellow:
+
+1. Modify your *html* file, placing the **variables** where it is needed
+2. Set the values of the **variables** in the *config.json* file
+3. Run the command **`parseiro <file_name.html>`** from your command line tool, and your *parsed file* will be placed at the *output* folder
+
+======================
+###Notes###
+
+The **`<file_name.html>`** must be the name of the **file that you want to parse**.
+
+The output folder will be created automatically **in the same folder** of you html file
+
+======================
+###Tips###
+
+Your **config.json** can be placed anywhere, and you can have **multiple config.json** files in **multiple places**, then you should specify the destination of the file on the command line, like so:
+
+> **`parseiro <file_name.html> C:\Test\config.json`**
+
+This way, you can have multiple configurations for diferent HTML templates.
+
+======================
+###Requirements###
+
+The only requirement is that you have **[node.js](http://nodejs.org/)** and **parseiro package** installed on your system.
+
+======================
+###Contribute###
+
+Please leave your comments, doubts, opinions!
+
 Thanks for using it!
 
 Made with ♥ by [Alessandro Dias](https://www.facebook.com/ale.bruno.dias).
