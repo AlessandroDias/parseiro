@@ -1,0 +1,9 @@
+{
+    "links": [
+        { "first-link"      : "http://www.google.com" },
+        { "second-link"     : "http://www.nodejs.org" },
+        { "highlight-image" : "http://lorempixel.com/400/200/animals" },
+        { "cool-text"       : "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+        { "common-link"     : "http://www.github.com" }
+    ]
+}

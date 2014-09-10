@@ -1,0 +1,26 @@
+{
+  "name": "parseiro",
+  "description": "Parses the variables in the HTML file, converting them into values.",
+  "version": "1.1.4",
+  "main": "lib/parseiro",
+  "bin": {
+    "parseiro": "lib/parseiro.js"
+  },
+  "preferGlobal": "true",
+  "engines": {
+    "node": "*"
+  },
+  "keywords": [
+    "parseiro",
+    "html-parser",
+    "node",
+    "npm"
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlessandroDias/html-parser"
+  },
+  "author": "Alessandro Dias",
+  "license": "MIT"
+}
