@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use sctrict'
+
 /************
  * Parseiro *
 *************/
@@ -13,19 +14,19 @@ var Parseiro = (function() {
 		output_path;
 
 	function parseHTMLFile() {
-		if (process.argv.length <= 4) {
+ 		var userArgs = process.argv.slice(2);
 
-			html_file = process.argv[2];
-			config_file = process.argv[3] || 'config.json';
+ 		if ( (userArgs) && (userArgs[0])) {
+ 			html_file = userArgs[0];
+			config_file = userArgs[1] || 'config.json';
 			output_path = path.join(path.dirname(fs.realpathSync(html_file)), '/output/');
 
 			if ( (fs.existsSync(html_file)) && (fs.existsSync(config_file)) ) {
 				readConfigFile();
 			}
-
-		} else {
-			printMessage('Error!! Enter the name of the HTML file');
-		}
+ 		} else {
+ 			printMessage('Error!! Enter the name of the HTML file');
+ 		}
 	}
 
 	// Reads config.json file
