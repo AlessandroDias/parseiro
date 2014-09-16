@@ -9,26 +9,27 @@ Parseiro - The HTML Parser
 1. [Example](#example)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [Notes](#notes)
-5. [Tips](#tips)
-6. [Requirements](#requirements)
-7. [Contribute](#contribute)
+4. [Tips](#tips)
+5. [Requirements](#requirements)
+6. [Contribute](#contribute)
 
 ======================
 ###Example###
 
-In this example, **Parseiro** will get all variables inside the **#{  }** tag and replace them with their respective values, set in the **config.json**.
+In this example, **Parseiro** will get all variables inside the **#{  }** tag and replace them by their respective values, set in the **config.json**.
 
-  > `<a href="#{first-link}">First link</a>`
+The **index.html** file:
+```html
+  <a href="#{first-link}">First link</a>
 
-  > `<a href="#{second-link}">Any other link</a>`
+  <a href="#{second-link}">Any other link</a>
 
-  > `<img src="#{highlight-image}" alt="This is my Awesome image!">`
+  <img src="#{highlight-image}" alt="This is my Awesome image!">
 
-  > `<p>#{cool-text}</p>`
+  <p>#{cool-text}</p>
+```
 
-The **config.json** file for this example would look like this:
-
+The **config.json** file for this example:
 ```json
 {
     "links": [
@@ -39,39 +40,40 @@ The **config.json** file for this example would look like this:
     ]
 }
 ```
-*Checkout the Demo folder, for a better understanding.*
+*See the Demo, for a better understanding.*
 
 ======================
 ###Installation###
 
-Run the following command in your command line tool;
-
-> npm install parseiro
+```shell
+npm install -g parseiro
+```
 
 ======================
 ###Usage###
 
 Once you have installed it in your system, follow the steps bellow:
 
-1. Modify your *html* file, placing the **variables** where it is needed
-2. Set the values of the **variables** in the *config.json* file
-3. Run the command **`parseiro <file_name.html>`** ( without the <  > ) from your command line tool, and your *parsed file* will be placed at the **output folder**
+1. Set the **variables** in your *html* file
+2. Set their values in the *config.json* file
+3. Run the following command from the command line, and your *parsed file* will be placed at the **output folder**
 
-======================
-###Notes###
+```
+  parseiro <file_name.html>
+    e.g. parseiro index.html
+```
 
-The **`<file_name.html>`** must be the name of the **file that you want to parse**.
-
-The output folder will be created automatically **in the same folder** of you html file
+*The output folder will be created automatically __in the same folder__ of you html file*
 
 ======================
 ###Tips###
 
-Your **config.json** can be placed anywhere, and you can have **multiple config.json** files in **multiple places**, then you should specify the destination of the file on the command line, like so:
+You can have multiple configurations for diferent HTML templates. For that, you just need to specify the path of the **config.json** file on the command line, like so:
 
-> **`parseiro <file_name.html> C:\Test\config.json`**
-
-This way, you can have multiple configurations for diferent HTML templates.
+```
+  parseiro <file_name.html> <config file path...>
+    e.g. parseiro index.html C:\Test\config.json
+```
 
 ======================
 ###Requirements###
