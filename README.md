@@ -3,8 +3,8 @@ Parseiro - The HTML Parser
 
 **Parseiro** simply parses the variables in the HTML file, converting them into values.
 
-======================
-###Sumary###
+
+# Sumary
 
 1. [Example](#example)
 2. [Installation](#installation)
@@ -13,8 +13,8 @@ Parseiro - The HTML Parser
 5. [Requirements](#requirements)
 6. [Contribute](#contribute)
 
-======================
-###Example###
+
+# Example
 
 In this example, **Parseiro** will get all variables inside the **#{  }** tag and replace them by their respective values, set in the **config.json**.
 
@@ -42,15 +42,15 @@ The **config.json** file for this example:
 ```
 *See the Demo, for a better understanding.*
 
-======================
-###Installation###
+
+# Installation
 
 ```shell
 npm install -g parseiro
 ```
 
-======================
-###Usage###
+
+# Usage
 
 Once you have installed it in your system, follow the steps bellow:
 
@@ -58,30 +58,34 @@ Once you have installed it in your system, follow the steps bellow:
 2. Set their values in the *config.json* file
 3. Run the following command from the command line, and your *parsed file* will be placed at the **output folder**
 
-```
-  parseiro <file_name.html>
-    e.g. parseiro index.html
+```bash
+parseiro <file_name.html>
+  
+e.g. 
+  
+$ parseiro index.html
 ```
 
 *The output folder will be created automatically __in the same folder__ of you html file*
 
-======================
-###Tips###
+
+# Tips
 
 You can have multiple configurations for diferent HTML templates. For that, you just need to specify the path of the **config.json** file on the command line, like so:
 
-```
-  parseiro <file_name.html> <config file path...>
-    e.g. parseiro index.html C:\Test\config.json
+```bash
+parseiro <file_name.html> <config file path...>
+  
+e.g.
+
+$ parseiro index.html C:\Test\config.json
 ```
 
-======================
-###Requirements###
+# Requirements
 
 The only requirement is that you have **[node.js](http://nodejs.org/)** and **parseiro package** installed on your system.
 
-======================
-###Contribute###
+# Contribute
 
 Please leave your comments, doubts, opinions!
 
